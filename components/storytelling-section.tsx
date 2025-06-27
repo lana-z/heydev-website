@@ -6,17 +6,17 @@ export function StorytellingSection() {
     {
       icon: Clock,
       title: "Time Overwhelm",
-      description: "Spending 50% of time on repetitive tasks instead of strategic relationship building.",
+      description: "Spending 50% of time on repetitive tasks instead of strategic relationship building",
     },
     {
       icon: Users,
       title: "Scale Limitations",
-      description: "Unable to engage meaningfully with growing developer communities across multiple channels and platforms.",
+      description: "Unable to engage meaningfully with growing developer communities across multiple channels and platforms",
     },
     {
       icon: Target,
       title: "Lack of Relationship",
-      description: "Struggling to get releases out to the right developers who have voiced interest in the release features.",
+      description: "Struggling to get releases out to the right developers who have voiced interest in the release features",
     },
   ]
 
@@ -69,7 +69,7 @@ export function StorytellingSection() {
             {painPoints.map((point, index) => {
               const Icon = point.icon
               return (
-                <Card key={index} className="border-l-4 border-l-orange-400 shadow-sm">
+                <Card key={index} className="border-l-4 border-l-orange-200 shadow-sm">
                   <CardContent className="p-6">
                     <div className="flex items-start">
                       <div className="rounded-lg bg-orange-50 p-2 mr-4">

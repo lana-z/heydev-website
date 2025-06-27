@@ -47,7 +47,7 @@ export function Hero() {
                 <span>Content Generation</span>
               </div>
               <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-cyan-400" />
+                <Users className="w-5 h-5 text-purple-400" />
                 <span>Community Engagement</span>
               </div>
               <div className="flex items-center gap-2">

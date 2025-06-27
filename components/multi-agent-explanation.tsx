@@ -39,7 +39,7 @@ export function MultiAgentExplanation() {
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Why a Multi-Agent AI is Revolutionary</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Unlike single bots, HeyDev deploys specialized AI agents working as a team. Together, they amplify your
+            Unlike single automations or piecemeal AI, HeyDev deploys specialized AI agents working as a team. Together, they amplify your
             DevRel impact far beyond what piecemeal AI or single-agent solutions can achieve.
           </p>
         </div>
