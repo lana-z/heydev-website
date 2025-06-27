@@ -6,17 +6,17 @@ export function StorytellingSection() {
     {
       icon: Clock,
       title: "Time Overwhelm",
-      description: "Spending 80% of time on repetitive tasks instead of strategic relationship building",
+      description: "Spending 50% of time on repetitive tasks instead of strategic relationship building.",
     },
     {
       icon: Users,
       title: "Scale Limitations",
-      description: "Unable to engage meaningfully with growing developer communities",
+      description: "Unable to engage meaningfully with growing developer communities across multiple channels and platforms.",
     },
     {
       icon: Target,
-      title: "Inconsistent Messaging",
-      description: "Struggling to maintain consistent voice across multiple channels and platforms",
+      title: "Lack of Relationship",
+      description: "Struggling to get releases out to the right developers who have voiced interest in the release features.",
     },
   ]
 
@@ -46,19 +46,21 @@ export function StorytellingSection() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100">
-              <div className="flex items-start">
-                <Zap className="h-6 w-6 text-purple-600 mt-1 mr-3 flex-shrink-0" />
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Transform Overwhelm into Impact</h3>
-                  <p className="text-gray-700">
-                    With HeyDev Advocate's autonomous agents, you reclaim your time for what matters most: building
-                    meaningful relationships, crafting strategic initiatives, and driving innovation in your developer
-                    community.
-                  </p>
+            <Card className="bg-gradient-to-r from-purple-50 to-pink-50 border-purple-100">
+              <CardContent className="p-6">
+                <div className="flex items-start">
+                  <Zap className="h-6 w-6 text-purple-600 mt-1 mr-3 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Transform Overwhelm into Impact</h3>
+                    <p className="text-gray-700">
+                      With HeyDev Advocate's autonomous agents, you reclaim your time for what matters most: building
+                      meaningful relationships, crafting strategic initiatives, and driving innovation in your developer
+                      community.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Right Column - Pain Points */}
@@ -67,11 +69,11 @@ export function StorytellingSection() {
             {painPoints.map((point, index) => {
               const Icon = point.icon
               return (
-                <Card key={index} className="border-l-4 border-l-red-400 shadow-sm">
+                <Card key={index} className="border-l-4 border-l-orange-400 shadow-sm">
                   <CardContent className="p-6">
                     <div className="flex items-start">
-                      <div className="rounded-lg bg-red-50 p-2 mr-4">
-                        <Icon className="h-5 w-5 text-red-600" />
+                      <div className="rounded-lg bg-orange-50 p-2 mr-4">
+                        <Icon className="h-5 w-5 text-orange-500" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-2">{point.title}</h4>
@@ -83,20 +85,22 @@ export function StorytellingSection() {
               )
             })}
 
-            <div className="mt-8 p-6 bg-green-50 rounded-xl border border-green-200">
-              <div className="flex items-start">
-                <div className="rounded-lg bg-green-100 p-2 mr-4">
-                  <Target className="h-5 w-5 text-green-600" />
+            <Card className="mt-8 bg-green-50 border-green-200">
+              <CardContent className="p-6">
+                <div className="flex items-start">
+                  <div className="rounded-lg bg-green-100 p-2 mr-4">
+                    <Target className="h-5 w-5 text-green-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-green-900 mb-2">The HeyDev Advocate Solution</h4>
+                    <p className="text-green-800">
+                      Our multi-agent AI system handles frees you up to focus on
+                      high-impact strategic work and authentic relationship building.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-green-900 mb-2">The HeyDev Advocate Solution</h4>
-                  <p className="text-green-800">
-                    Our multi-agent AI system handles these challenges automatically, freeing you to focus on
-                    high-impact strategic work and authentic relationship building.
-                  </p>
-                </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

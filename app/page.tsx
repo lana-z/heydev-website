@@ -1,9 +1,11 @@
 import { Hero } from "@/components/hero"
-import { MultiAgentExplanation } from "@/components/multi-agent-explanation"
 import { Features } from "@/components/features"
+import { MultiAgentExplanation } from "@/components/multi-agent-explanation"
 import { Team } from "@/components/team"
-import { Content } from "@/components/content"
 import { Footer } from "@/components/footer"
+import { WaitlistSection } from "@/components/waitlist-section"
+import { StorytellingSection } from "@/components/storytelling-section"
+import { Content } from "@/components/content-section"
 
 export default function HomePage() {
   return (
@@ -11,8 +13,10 @@ export default function HomePage() {
       <Hero />
       <MultiAgentExplanation />
       <Features />
-      <Team />
+      {/* <Team /> */}
       <Content />
+      <StorytellingSection />
+      <WaitlistSection />
       <Footer />
     </main>
   )

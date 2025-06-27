@@ -1,8 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { ArrowRight, BookOpen, FileText, Video } from "lucide-react"
 
-export function ContentSection() {
+export function Content() {
   const contentPieces = [
     {
       type: "Whitepaper",
@@ -50,11 +51,11 @@ export function ContentSection() {
             return (
               <Card
                 key={index}
-                className={`shadow-lg hover:shadow-xl transition-all duration-300 ${
-                  content.featured ? "lg:col-span-2 bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200" : ""
+                className={`shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col h-full ${
+                  content.featured ? "lg:col-span-1 bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200" : ""
                 }`}
               >
-                <CardContent className="p-8">
+                <CardContent className="p-8 flex flex-col h-full">
                   <div className="flex items-center mb-4">
                     <div className={`rounded-lg p-3 mr-4 ${content.featured ? "bg-purple-100" : "bg-gray-100"}`}>
                       <Icon className={`h-6 w-6 ${content.featured ? "text-purple-600" : "text-gray-600"}`} />
@@ -75,9 +76,9 @@ export function ContentSection() {
                     {content.title}
                   </h3>
 
-                  <p className="text-gray-600 mb-6">{content.description}</p>
+                  <p className="text-gray-600 flex-grow">{content.description}</p>
 
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between mt-6">
                     <span className="text-sm text-gray-500">{content.readTime}</span>
                     <Button
                       variant={content.featured ? "default" : "outline"}
@@ -107,12 +108,14 @@ export function ContentSection() {
                 relations. Join 500+ DevRel professionals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 rounded-lg bg-white/10 border border-white/20 px-4 py-3 text-white placeholder-gray-400 backdrop-blur-sm focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20"
-                />
-                <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8">Subscribe</Button>
+                <div className="flex-1">
+                  <Input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-purple-400 h-10"
+                  />
+                </div>
+                <Button className="bg-purple-600 hover:bg-purple-700 text-white px-8 h-10">Subscribe</Button>
               </div>
             </CardContent>
           </Card>

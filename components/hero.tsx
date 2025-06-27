@@ -6,7 +6,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
-import { ArrowRight, Bot, Users, Zap } from "lucide-react"
+import { ArrowRight, Bot, Users, TrendingUp, Workflow } from "lucide-react"
 
 export function Hero() {
   const [email, setEmail] = useState("")
@@ -51,7 +51,7 @@ export function Hero() {
                 <span>Community Engagement</span>
               </div>
               <div className="flex items-center gap-2">
-                <Zap className="w-5 h-5 text-cyan-400" />
+                <TrendingUp className="w-5 h-5 text-green-500" />
                 <span>Strategic Research</span>
               </div>
             </div>
@@ -59,9 +59,9 @@ export function Hero() {
             <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20">
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">Join Our Exclusive Early-Access Pilot</h3>
-                  <p className="text-blue-100 text-sm">
-                    First 100 members get personalized onboarding and direct influence on product direction.
+                  <h3 className="text-lg font-semibold mb-2 text-white">Join Our Exclusive Early-Access Pilot</h3>
+                  <p className="text-sm text-blue-200">
+                    First 50 get personalized onboarding and direct influence on product direction.
                   </p>
                 </div>
 
@@ -96,28 +96,28 @@ export function Hero() {
                 <Card className="p-4 bg-white/10 backdrop-blur-sm border-white/20 animate-pulse">
                   <div className="flex items-center gap-2 mb-2">
                     <Bot className="w-5 h-5 text-cyan-400" />
-                    <span className="text-sm font-medium">GitHub Changelog to Content Agent</span>
+                    <span className="text-sm text-cyan-500">GitHub Changelog to Content Agent</span>
                   </div>
-                  <p className="text-xs text-blue-200">Generating technical blog post...</p>
+                  <p className="text-xs text-blue-200 font-bold">Generating technical blog post...</p>
                 </Card>
                 <Card className="p-4 bg-white/10 backdrop-blur-sm border-white/20 animate-pulse delay-150">
                   <div className="flex items-center gap-2 mb-2">
                     <Users className="w-5 h-5 text-purple-400" />
-                    <span className="text-sm font-medium">Community Sentiment Agent</span>
+                    <span className="text-sm text-purple-400">Community Sentiment Agent</span>
                   </div>
-                  <p className="text-xs text-blue-200">Engaging with developers...</p>
+                  <p className="text-xs text-blue-200 font-bold">Engaging with developers...</p>
                 </Card>
                 <Card className="p-4 bg-white/10 backdrop-blur-sm border-white/20 animate-pulse delay-300">
                   <div className="flex items-center gap-2 mb-2">
-                    <Zap className="w-5 h-5 text-yellow-400" />
-                    <span className="text-sm font-medium">Research Agent</span>
+                    <TrendingUp className="w-5 h-5 text-green-500" />
+                    <span className="text-sm text-green-500">Research Agent</span>
                   </div>
                   <p className="text-xs text-blue-200">Analyzing trends...</p>
                 </Card>
                 <Card className="p-4 bg-white/10 backdrop-blur-sm border-white/20 animate-pulse delay-500">
                   <div className="flex items-center gap-2 mb-2">
-                    <ArrowRight className="w-5 h-5 text-green-400" />
-                    <span className="text-sm font-medium">Orchestrator</span>
+                    <Workflow className="w-5 h-5 text-yellow-500" />
+                    <span className="text-sm text-orange-500">Orchestrator Agent</span>
                   </div>
                   <p className="text-xs text-blue-200">Recommending actions...</p>
                 </Card>

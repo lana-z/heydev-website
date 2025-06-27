@@ -13,21 +13,21 @@ export function Footer() {
               and authentically.
             </p>
             <div className="flex gap-4">
-              <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white">
+              <Button variant="ghost" size="sm" className="text-gray-300">
                 <Twitter className="w-5 h-5" />
               </Button>
-              <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white">
+              <Button variant="ghost" size="sm" className="text-gray-300">
                 <Linkedin className="w-5 h-5" />
               </Button>
-              <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white">
+              <Button variant="ghost" size="sm" className="text-gray-300">
                 <Github className="w-5 h-5" />
               </Button>
-              <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white">
+              <Button variant="ghost" size="sm" className="text-gray-300">
                 <Mail className="w-5 h-5" />
               </Button>
             </div>
           </div>
-
+{/* 
           <div>
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-2 text-gray-300">
@@ -78,12 +78,12 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">© 2024 HeyDev Advocate. All rights reserved.</p>
+            <p className="text-gray-400 text-sm">© 2025 HeyDev Advocate. All rights reserved.</p>
             <div className="flex gap-6 text-sm text-gray-400">
               <a href="#" className="hover:text-white transition-colors">
                 Privacy Policy

@@ -4,6 +4,7 @@ import type React from "react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
 import { ArrowRight, CheckCircle, Star, Users } from "lucide-react"
 import { useState } from "react"
 
@@ -23,16 +24,17 @@ export function WaitlistSection() {
   }
 
   const benefits = [
-    "Personalized onboarding with our founding team",
+    "Personalized onboarding",
     "Direct influence on product roadmap and features",
-    "Exclusive access to beta features and updates",
-    "Priority support and dedicated success manager",
-    "Special pricing for early adopters",
+    "Exclusive access to beta features",
+    "Priority support",
+    // "Special pricing for early adopters",
   ]
 
   return (
-    <section className="py-24 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden py-24 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <div className="absolute inset-0 bg-black/20" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center rounded-full bg-yellow-500/20 px-4 py-2 text-sm font-medium text-yellow-200 ring-1 ring-yellow-500/30 mb-6">
             <Star className="mr-2 h-4 w-4" />
@@ -41,7 +43,7 @@ export function WaitlistSection() {
 
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-6">Join the Future of Developer Relations</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Be among the first 100 DevRel professionals to experience autonomous multi-agent AI. Shape the product, get
+            Be among the first 50 DevRel professionals to experience autonomous multi-agent AI tooling designed just for you. Shape the product, get
             exclusive benefits, and transform your developer advocacy.
           </p>
         </div>
@@ -61,16 +63,20 @@ export function WaitlistSection() {
               </div>
             </div>
 
-            <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm border border-white/20">
-              <div className="flex items-center mb-4">
-                <Users className="h-6 w-6 text-purple-400 mr-3" />
-                <h4 className="text-lg font-semibold">Limited Spots Available</h4>
+            <Card className="p-6 bg-white/10 backdrop-blur-sm border-white/20">
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-lg font-semibold mb-2 text-white">Limited Spots Available</h3>
+                  <p className="text-sm text-blue-200">
+                    We're accepting only 50 early access members to ensure personalized attention and meaningful product feedback.
+                  </p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Users className="w-5 h-5 text-cyan-400" />
+                  <span className="text-blue-100">Join now to secure your spot</span>
+                </div>
               </div>
-              <p className="text-gray-300">
-                We're accepting only 100 early access members to ensure personalized attention and meaningful product
-                feedback. Join now to secure your spot.
-              </p>
-            </div>
+            </Card>
           </div>
 
           {/* Right Column - Signup Form */}
@@ -81,12 +87,12 @@ export function WaitlistSection() {
                   <label htmlFor="name" className="block text-sm font-medium text-gray-200 mb-2">
                     Full Name *
                   </label>
-                  <input
+                  <Input
                     type="text"
                     id="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full rounded-lg bg-white/10 border border-white/20 px-4 py-3 text-white placeholder-gray-400 backdrop-blur-sm focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20"
+                    className="w-full bg-white/20 border-white/30 text-white placeholder:text-blue-200 focus:border-cyan-400"
                     placeholder="Your full name"
                     required
                   />
@@ -96,12 +102,12 @@ export function WaitlistSection() {
                   <label htmlFor="email" className="block text-sm font-medium text-gray-200 mb-2">
                     Email Address *
                   </label>
-                  <input
+                  <Input
                     type="email"
                     id="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full rounded-lg bg-white/10 border border-white/20 px-4 py-3 text-white placeholder-gray-400 backdrop-blur-sm focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20"
+                    className="w-full bg-white/20 border-white/30 text-white placeholder:text-blue-200 focus:border-cyan-400"
                     placeholder="your@email.com"
                     required
                   />
@@ -109,27 +115,29 @@ export function WaitlistSection() {
 
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-200 mb-2">
-                    Company
+                    Company *
                   </label>
-                  <input
+                  <Input
                     type="text"
                     id="company"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="w-full rounded-lg bg-white/10 border border-white/20 px-4 py-3 text-white placeholder-gray-400 backdrop-blur-sm focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20"
+                    className="w-full bg-white/20 border-white/30 text-white placeholder:text-blue-200 focus:border-cyan-400"
                     placeholder="Your company name"
+                    required
                   />
                 </div>
 
                 <div>
                   <label htmlFor="role" className="block text-sm font-medium text-gray-200 mb-2">
-                    Role in DevRel
+                    Role in DevRel *
                   </label>
                   <select
                     id="role"
                     value={formData.role}
                     onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                    className="w-full rounded-lg bg-white/10 border border-white/20 px-4 py-3 text-white backdrop-blur-sm focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/20"
+                    className="w-full h-10 rounded-md bg-white/20 border border-white/30 px-3 py-2 text-white placeholder:text-blue-200 focus:border-cyan-400 focus:outline-none"
+                    required
                   >
                     <option value="" className="text-gray-900">
                       Select your role
@@ -146,14 +154,23 @@ export function WaitlistSection() {
                     <option value="technical-writer" className="text-gray-900">
                       Technical Writer
                     </option>
+                    <option value="founder" className="text-gray-900">
+                      Founder
+                    </option>
+                    <option value="Developer" className="text-gray-900">
+                      Developer
+                    </option>
+                    <option value="Product" className="text-gray-900">
+                      Product role
+                    </option>
                     <option value="other" className="text-gray-900">
                       Other
                     </option>
                   </select>
                 </div>
 
-                <Button type="submit" size="lg" className="w-full bg-purple-600 hover:bg-purple-700 text-white">
-                  Join Exclusive Early Access
+                <Button type="submit" size="lg" className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-bold">
+                  Join the Pilot Waitlist
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
 
